@@ -1,0 +1,45 @@
+<!--
+2) Перепишите код, используя конструкцию switch-case, запрашивая возраст пользователя через диалоговое окно.
+-->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
+    <script>
+      function showAge() {
+        var age = prompt("Сколько вам лет?");
+        switch (true) {
+          case age >= 0 && age <= 12:
+            alert("Вы пока что ребенок");
+            break;
+          case age >= 13 && age <= 19:
+            alert("Вы уже подросток");
+            break;
+          case age >= 20 && age <= 64:
+            alert("Вы взрослый человек");
+            break;
+          case age >= 65 && age <= 120:
+            alert("Вы пожилой человек");
+            break;
+          default:
+            alert("Да вы долгожитель, но скорее это недопустимый возраст");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="center">
+      <p>Нажмите на кнопку, чтобы увидеть свою возрастную категорию:</p>
+      <button onclick="showAge()">Нажать</button>
+    </div>
+  </body>
+</html>
